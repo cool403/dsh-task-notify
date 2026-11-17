@@ -1,0 +1,13 @@
+- insert:
+    - id: task-notify
+      name: '@cool403/dsh-task-notify'
+      config:
+        enabled: true
+        notifyOnCompleted: true
+        notifyOnError: true
+        notifyOnAborted: false
+        minDurationMs: 3000
+        includeSubagents: false
+        previewChars: 120
+        silent: false
+        windowsChannel: auto

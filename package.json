@@ -1,0 +1,43 @@
+{
+  "name": "@cool403/dsh-task-notify",
+  "version": "1.0.0",
+  "description": "Desktop notifications when a DeepSeek Harness turn ends, with duration and token usage.",
+  "type": "module",
+  "license": "MIT",
+  "author": "cool403",
+  "homepage": "https://github.com/cool403/dsh-task-notify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cool403/dsh-task-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cool403/dsh-task-notify/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "notification",
+    "toast",
+    "desktop"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

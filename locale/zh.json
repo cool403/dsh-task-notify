@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "任务结束通知",
+    "description": "对话的回合结束时弹出桌面通知，方便你在后台运行任务时去做别的事。通知会显示会话名称、本回合用时、本回合的 token 用量（输入 / 输出 / 缓存读取，按该回合模型响应累加），以及最新一条回复的简短预览；失败或中断的回合会在标题中说明。在输入框输入 /notify-test 可以发送一条测试通知，它会如实报告发送是否成功。Windows 上默认以 DeepSeek Harness 的身份弹出系统通知，失败时回退为托盘气泡；若看不到通知，请检查 Windows「设置 > 系统 > 通知」中 DeepSeek Harness 的横幅开关，或把 windowsChannel 设为 balloon 改用托盘气泡。macOS 使用通知横幅；Linux 使用 notify-send。只有主会话的回合结束才会通知，子代理会话默认跳过（可用 includeSubagents 打开）；短于 minDurationMs（默认 3000 毫秒）的回合不通知。插件无法判断窗口是否在前台，因此每个符合条件的回合都会通知。配置写在 Loader 行里，没有设置表单：在所属 profile 的 cordis.patch.yml 增加一条按 id 覆盖的条目，写明 `id: task-notify`、`name: \"@local/dsh-task-notify\"` 和要改的 `config` 字段（未写的字段使用内置默认值）。可配置项：enabled、notifyOnCompleted、notifyOnError、notifyOnAborted、minDurationMs、includeSubagents、previewChars、silent、titleCompleted、titleError、titleAborted、bodyTemplate（支持 {session}、{duration}、{reason}、{tokens} 占位符；默认 `{session} · {duration} · {tokens}`，不想要 token 就删掉 {tokens}）、windowsAppId、windowsChannel（auto / toast / balloon）。插件只读取会话事件流，不向会话写入任何内容。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}
