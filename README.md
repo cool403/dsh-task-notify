@@ -55,11 +55,11 @@ git+https://github.com/cool403/dsh-task-notify.git
 
 **方式三：npm**
 
-```sh
-npm publish --access public
-```
+已发布到 npm；`install_bundle` 的 `target` 直接用 `@cool403/dsh-task-notify`。也可以先安装查看包内容：
 
-之后 `install_bundle` 的 `target` 直接用 `@cool403/dsh-task-notify`。
+```sh
+npm install @cool403/dsh-task-notify
+```
 
 ### 配置
 
@@ -149,11 +149,11 @@ git+https://github.com/cool403/dsh-task-notify.git
 
 **From npm**
 
-```sh
-npm publish --access public
-```
+The package is published to npm; use `install_bundle` with target `@cool403/dsh-task-notify`. To inspect the package first:
 
-Then install with `install_bundle` and target `@cool403/dsh-task-notify`.
+```sh
+npm install @cool403/dsh-task-notify
+```
 
 ### Configuration
 
